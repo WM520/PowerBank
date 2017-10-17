@@ -239,10 +239,16 @@ WMAddressSelectViewControllerDelegate>
         if (weakself.sendOrderView.isReceived) {
             [WMRequestHelper deleteUserRequireOrder:weakself.sendOrderView.orderModel.orderID withCompletionHandle:^(BOOL success, id dataDic) {
                 NSLog(@"%@", dataDic);
+                if (success) {
+                    [[PhoneNotification sharedInstance] autoHideWithText:@"成功取消"];
+                }
             }];
         } else { // 接单前的取消方式
             [WMRequestHelper deleteOrder:weakself.model.orderID withCompletionHandle:^(BOOL success, id dataDic) {
                 NSLog(@"%@", dataDic);
+                if (success) {
+                    [[PhoneNotification sharedInstance] autoHideWithText:@"成功取消"];
+                }
             }];
         }
         [weakself.sendOrderView immediatelyHide];
