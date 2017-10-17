@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WMFeekBackCell" id="gTV-IL-0wX" customClass="WMFeekBackCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="172"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="216" height="172"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-9h-LgU">
+                        <rect key="frame" x="5" y="10" width="206" height="157"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-au-Fy9">
+                        <rect key="frame" x="196" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Je4-XH-m16"/>
+                            <constraint firstAttribute="height" constant="20" id="lpL-jx-qgW"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="feekbackDelebutton"/>
+                        <connections>
+                            <action selector="deleteImage:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jNp-Nq-h8C"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cHN-9h-LgU" secondAttribute="trailing" constant="5" id="0jJ-FQ-Lbx"/>
+                <constraint firstItem="cHN-9h-LgU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="arY-25-pVk"/>
+                <constraint firstItem="bZf-au-Fy9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bqG-Uj-4yz"/>
+                <constraint firstAttribute="bottom" secondItem="cHN-9h-LgU" secondAttribute="bottom" constant="5" id="cox-kz-iUV"/>
+                <constraint firstAttribute="trailing" secondItem="bZf-au-Fy9" secondAttribute="trailing" id="vLh-Nk-RI7"/>
+                <constraint firstItem="cHN-9h-LgU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="vgH-FZ-u4q"/>
+            </constraints>
+            <size key="customSize" width="216" height="172"/>
+            <connections>
+                <outlet property="deleteButton" destination="bZf-au-Fy9" id="SXu-qu-Zjq"/>
+                <outlet property="feekbackImage" destination="cHN-9h-LgU" id="GJs-iI-GyJ"/>
+            </connections>
+            <point key="canvasLocation" x="-448" y="-59"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="feekbackDelebutton" width="13" height="13"/>
+    </resources>
+</document>

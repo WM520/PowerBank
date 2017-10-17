@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1C14FB32A68EEDB6DF0E57D4A9390D2F8C14FEFF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "14753468-36e2-4cfd-b9ad-9b4aa16e7b3f++6097" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "14753468-36e2-4cfd-b9ad-9b4aa16e7b3f++6097" : 9223372036854775807,
+    "1C14FB32A68EEDB6DF0E57D4A9390D2F8C14FEFF" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "23E9D9D3-BD45-4D5F-9D95-2D63C7E4E7BD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "14753468-36e2-4cfd-b9ad-9b4aa16e7b3f++6097" : "..\/..\/Documents\/%E5%B7%A5%E4%BD%9C\/IOS",
+    "1C14FB32A68EEDB6DF0E57D4A9390D2F8C14FEFF" : "PowerBank\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PowerBank",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PowerBank.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.111.36\/svn\/szwl",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "14753468-36e2-4cfd-b9ad-9b4aa16e7b3f++6097"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/WM520\/PowerBank.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1C14FB32A68EEDB6DF0E57D4A9390D2F8C14FEFF"
+    }
+  ]
+}

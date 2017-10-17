@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[WMMainRightViewController refresh]:WMMainRightViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_notiDictionary">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__47-[WMMainLeftViewViewController viewWillAppear:]_block_invoke:WMMainLeftViewViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__33-[WMSendOrderView addMoneyAction]_block_invoke:WMSendOrderView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__29-[LoginViewController login:]_block_invoke_2:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__40-[WMMainRightViewController orderSended]_block_invoke:WMMainRightViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__28-[AppDelegate refreshHomeVC]_block_invoke:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[WMRequestHelper addUserShare:latitude:addr:address:quantity:device:WithCompletionHandle:]:WMHttpManager.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[WMSendOrderView setModel:]:WMSendOrderView.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[WMPayView tableView:didSelectRowAtIndexPath:]:WMPayView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_orderModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[WMRequestHelper acquiringChargerList:page:withCompletionHandle:]:WMHttpManager.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tmp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__45-[WMMainRightViewController openShareAction:]_block_invoke_2:WMMainRightViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "noti">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__44-[WMMainRightViewController viewWillAppear:]_block_invoke:WMMainRightViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__49-[WMMainLeftViewViewController initRequireStatus]_block_invoke_2:WMMainLeftViewViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[WMMainLeftViewViewController sendDemand:]:WMMainLeftViewViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__27-[AppDelegate loginSuccess]_block_invoke:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__45-[WMMainRightViewController openShareAction:]_block_invoke:WMMainRightViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController openShare:]:MainViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[WMShareRecordDetailViewController initUI]:WMShareRecordDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__43-[WMShareRecordDetailViewController commit]_block_invoke:WMShareRecordDetailViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__44-[WMMainRightViewController viewWillAppear:]_block_invoke_2:WMMainRightViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__39-[WMMainLeftViewViewController refresh]_block_invoke.402:WMMainLeftViewViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MineViewController initData]:MineViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_userModel">
+            </PersistentString>
+            <PersistentString
+               value = "_model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__40-[WMRechargeListViewController initData]_block_invoke:WMRechargeListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[WMMainLeftViewViewController onReGeocodeSearchDone:response:]:WMMainLeftViewViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.regeocode">
+            </PersistentString>
+            <PersistentString
+               value = "_sendDemandView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__39-[WMMainLeftViewViewController refresh]_block_invoke:WMMainLeftViewViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_cabinetAnnotationArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__42-[WMMineWalletViewController configBaseUI]_block_invoke.151:WMMineWalletViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataDic">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MineHeadView initUI]:MineHeadView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,28 @@
+//
+//  PowerBankPrefixHeader.pch
+//  PowerBank
+//
+//  Created by wangmiao on 2017/6/19.
+//  Copyright © 2017年 wangmiao. All rights reserved.
+//
+
+#ifndef PowerBankPrefixHeader_pch
+#define PowerBankPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "CommonDefine.h"
+#import "UIView+Extensions.h"
+#import "UIColor+Extensions.h"
+#import <SDAutoLayout.h>
+#import "UIButton+Extensions.h"
+#import <Masonry.h>
+#import "PromptView.h"
+#import "Utils.h"
+#import <UIImageView+WebCache.h>
+#import "AppSettings.h"
+#import "WMHttpManager.h"
+#import <MJRefresh/MJRefresh.h>
+#import "WMCustomAlert.h"
+#import "PhoneNotification.h"
+#endif /* PowerBankPrefixHeader_pch */
