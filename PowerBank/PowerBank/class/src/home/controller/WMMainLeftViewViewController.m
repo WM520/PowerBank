@@ -172,10 +172,15 @@ WMAddressSelectViewControllerDelegate>
 {
     WMCustomAlert * alert = [[WMCustomAlert alloc] initWithTitle:[NSString stringWithFormat:@"您的订单已被取消，是否重新寻找充电宝？"] cancleButtonTitle:@"否" commitButtonTitle:@"是" isCancleImage:0];
     kWeakSelf(self);
-    alert.commitBlock = ^() {
-        // 重新下单接口
-    };
+
     alert.cancleBlock = ^{
+        [WMRequestHelper deleteUserRequireOrder:weakself.sendOrderView.orderModel.orderID withCompletionHandle:^(BOOL success, id dataDic) {
+            NSLog(@"%@", dataDic);
+            if (success) {
+                [[PhoneNotification sharedInstance] autoHideWithText:@"重新寻找充电宝"];
+            }
+        }];
+        
         [weakself.sendOrderView immediatelyHide];
         weakself.sendOrderView = nil;
     };
@@ -238,10 +243,10 @@ WMAddressSelectViewControllerDelegate>
         return;
     }
     
-    if([userModel.userCreditNum integerValue] ==  0) {
-        [[PhoneNotification sharedInstance] autoHideWithText:@"您的信用值已经为0，不能再取消订单"];
-        return;
-    }
+//    if([userModel.userCreditNum integerValue] ==  0) {
+//        [[PhoneNotification sharedInstance] autoHideWithText:@"您的信用值已经为0，不能再取消订单"];
+//        return;
+//    }
     
     kWeakSelf(self);
     WMCustomAlert * alert = [[WMCustomAlert alloc] initWithTitle:[NSString stringWithFormat:@"您的订单已被接单，您还有%ld次免费取消次数，确定取消?", 5 -[userModel.cancelRequireCountLimit integerValue]] cancleButtonTitle:@"仍要取消" commitButtonTitle:@"不取消" isCancleImage:0];
