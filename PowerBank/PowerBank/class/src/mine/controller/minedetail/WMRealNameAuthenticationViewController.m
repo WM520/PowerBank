@@ -43,10 +43,19 @@
     self.title = @"实名认证";
     // 是否已经认证过
     if (_isCertification) {
+        [WMRequestHelper acquiringIndenifyInfoWithCompletionHandle:^(BOOL success, id dataDic) {
+            if (success) {
+                if ([[dataDic objectForKey:@"data"] isKindOfClass:[NSDictionary class]]) {
+                    NSDictionary * info = [dataDic objectForKey:@"data"];
+                    _userNameTF.text = [info objectForKey:@"username"];
+                    _userIDCard.text = [info objectForKey:@"cardNumber"];
+                }
+            }
+        }];
+        
         _userIDCard.enabled = NO;
         _userNameTF.enabled = NO;
-        _userNameTF.text = @"汪淼";
-        _userIDCard.text = @"320723199205155312";
+        
     } else {
         _userNameTF.delegate = self;
         _userIDCard.delegate = self;

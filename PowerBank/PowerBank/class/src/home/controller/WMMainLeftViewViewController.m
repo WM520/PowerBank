@@ -385,6 +385,8 @@ WMAddressSelectViewControllerDelegate>
             [sendDemandView show];
             _sendDemandView = sendDemandView;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"noti1" object:nil];
+        } else {
+            [[PhoneNotification sharedInstance] autoHideWithText:@"你有正在进行的充电需求"];
         }
 //        [view setSelected:NO animated:YES];
     }

@@ -466,6 +466,19 @@ static PhoneNotification * _phoneNotification = nil;
         handleBlock(NO,error);
     }];
 }
+#pragma mark - 获取身份认证信息
++ (void)acquiringIndenifyInfoWithCompletionHandle:(void(^)(BOOL success,id dataDic))handleBlock
+{
+    [_phoneNotification manuallyHideWithText:nil indicator:YES];
+    WMHttpManager * manager = [WMHttpManager sharedManager];
+    [manager requestWithMethod:GET WithPath:[HttpURLManager identifyUrl] WithParams:nil WithSuccessBlock:^(NSDictionary *dic) {
+        [_phoneNotification hideNotification];
+        handleBlock(YES, dic);
+    } WithFailurBlock:^(NSError *error) {
+        [_phoneNotification hideNotification];
+        handleBlock(NO,error);
+    }];
+}
 
 #pragma mark - 绑定银行卡
 /**

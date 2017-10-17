@@ -185,6 +185,9 @@ withCompletionHandle:(void(^)(BOOL success,id dataDic))handleBlock;
                       number:(NSString *)number
         withCompletionHandle:(void(^)(BOOL success,id dataDic))handleBlock;
 
+#pragma mark - 获取身份认证信息
++ (void)acquiringIndenifyInfoWithCompletionHandle:(void(^)(BOOL success,id dataDic))handleBlock;
+
 #pragma mark - 绑定银行卡
 + (void)addBankCardWithUsername:(NSString *)username
                        bankname:(NSString *)bankname
