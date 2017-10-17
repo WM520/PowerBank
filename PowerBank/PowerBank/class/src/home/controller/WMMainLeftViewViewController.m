@@ -370,14 +370,16 @@ WMAddressSelectViewControllerDelegate>
         regeo.requireExtension            = YES;
         [_search AMapReGoecodeSearch:regeo];
         
-        WMSendDemandView * sendDemandView = [[WMSendDemandView alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT - 220, SCREEN_WIDTH - 40, 190)];
-        sendDemandView.latitude = [NSString stringWithFormat:@"%f", _nowLocation.coordinate.latitude];
-        sendDemandView.longitude = [NSString stringWithFormat:@"%f", _nowLocation.coordinate.longitude];
-        sendDemandView.delegate = self;
-        _sendDemandY = sendDemandView.centerY;
-        [sendDemandView show];
-        _sendDemandView = sendDemandView;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"noti1" object:nil];
+        if (_sendOrderView == nil) {
+            WMSendDemandView * sendDemandView = [[WMSendDemandView alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT - 220, SCREEN_WIDTH - 40, 190)];
+            sendDemandView.latitude = [NSString stringWithFormat:@"%f", _nowLocation.coordinate.latitude];
+            sendDemandView.longitude = [NSString stringWithFormat:@"%f", _nowLocation.coordinate.longitude];
+            sendDemandView.delegate = self;
+            _sendDemandY = sendDemandView.centerY;
+            [sendDemandView show];
+            _sendDemandView = sendDemandView;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"noti1" object:nil];
+        }
 //        [view setSelected:NO animated:YES];
     }
     
