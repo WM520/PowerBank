@@ -86,9 +86,11 @@
         _sendTimeLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_sendTimeLabel];
         
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"h:mm "];
         _sendTimeLabelCount = [[UILabel alloc] init];
         _sendTimeLabelCount.userInteractionEnabled = YES;
-        _sendTimeLabelCount.text = @"17:30";
+        _sendTimeLabelCount.text = [dateFormatter stringFromDate:[NSDate date]];
         _sendTimeLabelCount.textAlignment = NSTextAlignmentCenter;
         _sendTimeLabelCount.font = Font(25);
         _sendTimeLabelCount.textColor = [UIColor redColor];
@@ -249,7 +251,7 @@
             _dataArray = dataArray;
             [ActionSheetStringPicker showPickerWithTitle:@"红包" rows:dataArray initialSelection:_selectIndex target:self successAction:@selector(animalWasSelected:element:) cancelAction:@selector(actionPickerCancelled:) origin:self];
         } else if (sender.view == _sendTimeLabelCount) {
-            NSInteger minuteInterval = 5;
+            NSInteger minuteInterval = 10;
             //clamp date
             NSInteger referenceTimeInterval = (NSInteger)[self.selectedTime timeIntervalSinceReferenceDate];
             NSInteger remainingSeconds = referenceTimeInterval % (minuteInterval *60);
@@ -258,7 +260,9 @@
                 timeRoundedTo5Minutes = referenceTimeInterval +((minuteInterval*60)-remainingSeconds);
             }
             self.selectedTime = [NSDate date];
-            ActionSheetDatePicker *datePicker = [[ActionSheetDatePicker alloc] initWithTitle:@"选择时间" datePickerMode:UIDatePickerModeTime selectedDate:self.selectedTime target:self action:@selector(timeWasSelected:element:) origin:self];
+//            ActionSheetDatePicker *datePicker = [[ActionSheetDatePicker alloc] initWithTitle:@"选择时间" datePickerMode:UIDatePickerModeTime selectedDate:self.selectedTime target:self action:@selector(timeWasSelected:element:) origin:self];
+            NSDate *maxDate = [NSDate dateWithTimeInterval:24*60*60 sinceDate:[NSDate date]];;
+            ActionSheetDatePicker *datePicker = [[ActionSheetDatePicker alloc] initWithTitle:@"选择时间" datePickerMode:UIDatePickerModeTime selectedDate:self.selectedTime minimumDate:self.selectedTime maximumDate:maxDate target:self action:@selector(timeWasSelected:element:) origin:self];
             datePicker.minuteInterval = minuteInterval;
             [datePicker showActionSheetPicker];
         } else if (sender.view == _addressLabel) {
