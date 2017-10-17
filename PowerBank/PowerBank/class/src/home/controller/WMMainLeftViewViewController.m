@@ -157,8 +157,6 @@ WMAddressSelectViewControllerDelegate>
 - (void)orderHasReceive
 {
      dispatch_async(dispatch_get_main_queue(), ^{
-         
-         sleep(1);
          [self initRequireStatus];
      });
 }
@@ -166,10 +164,23 @@ WMAddressSelectViewControllerDelegate>
 - (void)orderHasCancle
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        sleep(1);
-        [self initRequireStatus];
+        [self cancleAlert];
     });
+}
+
+- (void)cancleAlert
+{
+    WMCustomAlert * alert = [[WMCustomAlert alloc] initWithTitle:[NSString stringWithFormat:@"您的订单已被取消，是否重新寻找充电宝？"] cancleButtonTitle:@"否" commitButtonTitle:@"是" isCancleImage:0];
+    kWeakSelf(self);
+    alert.commitBlock = ^() {
+        // 重新下单接口
+    };
+    alert.cancleBlock = ^{
+        [weakself.sendOrderView immediatelyHide];
+        weakself.sendOrderView = nil;
+    };
+    
+    [alert show];
 }
 
 #pragma mark -WMSendDemandViewDelegate
